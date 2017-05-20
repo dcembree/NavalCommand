@@ -1,4 +1,19 @@
 # NavalCommand
 A RESTful API to control naval vessels
 
-This is still a work in progress. Will be adding a basic UI and SQL scripts soon.
+Initial release, version 1.0.0.0
+
+Use instructions:
+1) Database setup:
+Target system is SQL Express or SQL Server
+Run "./Database Scripts/NavalCommandDb.sql" in SQL Management Studio
+This includes the database itself, a table and some data.
+
+2) Connection setup:
+Open "NavalCommand.sln"
+Navigate to "Models/NavalCommandContext.cs"
+Update the connection string in "base(@"Data Source=.\SQLEXPRESS; etc.")" to point to your instance of the table created in the previous step.
+
+3) Select your favorite browser and start the application.
+The RESTful API is located at localhost:[your port]/api/VesselsApi/
+Example PUT and POST AJAX calls can be found in /Views/EditVessel.cshtml and /Views/CreateVessel.cshtml, respectively.
