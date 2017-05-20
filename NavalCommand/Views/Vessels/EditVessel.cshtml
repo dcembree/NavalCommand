@@ -163,7 +163,7 @@
                 url: "/api/VesselsApi/" + id,
                 data: data,
                 success: function (reply) {
-                    location.href = "/Vessels/ShipDetail/" + reply.Id;
+                    location.href = "/Vessels/ShipDetail/" + id;
                 },
                 error: function (error) {
                     alert(error.statusText);
