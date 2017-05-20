@@ -1,0 +1,117 @@
+﻿@model IEnumerable<NavalCommand.Models.Vessel>
+
+@{
+    ViewBag.Title = "Vessels";
+}
+
+<h2>Vessels</h2>
+
+<p>
+    @Html.ActionLink("Create New", "NewVessel")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.VesselClass)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HomePort)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CommissionDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DecommissionDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HullConfiguration)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HullStatus)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DeploymentStatus)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CrewComplement)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CurrentLongitude)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CurrentLatitude)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CurrentHeading)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CurrentSpeed)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CurrentDepth)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CurrentOrders)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.VesselClass)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.HomePort)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CommissionDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DecommissionDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.HullConfiguration)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.HullStatus)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DeploymentStatus)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CrewComplement)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CurrentLongitude)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CurrentLatitude)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CurrentHeading)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CurrentSpeed)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CurrentDepth)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CurrentOrders)
+        </td>
+        <td class="col-md-5">
+            @Html.ActionLink("Edit Vessel", "EditVessel", new { id=item.Id }) |
+            @Html.ActionLink("Ship Details", "ShipDetail", new { id=item.Id }) |
+            @Html.ActionLink("Sink this ship", "DeleteVessel", new { id=item.Id })
+        </td>
+    </tr>
+}
+
+</table>

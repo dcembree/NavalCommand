@@ -1,0 +1,138 @@
+﻿@model NavalCommand.Models.Vessel
+
+@{
+    ViewBag.Title = "ShipDetail";
+}
+
+<h2>ShipDetail</h2>
+
+<div>
+    <h4>Vessel</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.VesselClass)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.VesselClass)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HomePort)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HomePort)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CommissionDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CommissionDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DecommissionDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DecommissionDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HullConfiguration)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HullConfiguration)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HullStatus)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HullStatus)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DeploymentStatus)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DeploymentStatus)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CrewComplement)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CrewComplement)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CurrentLongitude)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CurrentLongitude)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CurrentLatitude)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CurrentLatitude)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CurrentHeading)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CurrentHeading)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CurrentSpeed)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CurrentSpeed)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CurrentDepth)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CurrentDepth)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CurrentOrders)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CurrentOrders)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "EditVessel", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "/")
+</p>
